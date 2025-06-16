@@ -48,7 +48,7 @@ export function OrderedList(props: React.HTMLAttributes<HTMLUListElement>) {
 }
 
 export function ListItem(props: React.HTMLAttributes<HTMLLIElement>) {
-  return <li {...props} className='mb-2' />;
+  return <li {...props} className='mb-2 space-y-2.5' />;
 }
 
 export function Pre(props: React.HTMLAttributes<HTMLElement>) {
