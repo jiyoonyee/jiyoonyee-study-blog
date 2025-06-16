@@ -17,11 +17,11 @@ export default async function Home() {
 
   return (
     <div className='w-full flex flex-col items-center px-4 py-8'>
-      <div className='max-w-6xl w-full grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 grid'>
+      <div className='max-w-7xl w-full grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-10 grid '>
         {posts.map((post) => (
           <div
             key={post.slug}
-            className='border border-black/10 rounded-lg shadow-md'>
+            className='border border-gray-800 rounded-lg shadow-md bg-amber-300 transition-transform transition-shadow duration-300 transform hover:-translate-y-2 hover:shadow-xl'>
             <Image
               src={
                 post.metadata.image ||
@@ -39,8 +39,8 @@ export default async function Home() {
               <p className='text-gray-600 mb-4'>{post.metadata.description}</p>
               <Link
                 href={`/posts/${post.slug}`}
-                className='text-blue-500 hover:underline'>
-                Read more
+                className='text-blue-600 hover:underline  '>
+                자세히 보기
               </Link>
             </div>
           </div>

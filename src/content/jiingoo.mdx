@@ -1,0 +1,49 @@
+export const metadata = {
+  title: '찡구',
+  description: '찡구',
+};
+
+# 찡구 (Jiingoo)
+
+### 약속 장소를 찾아주는 웹사이트
+
+[바로가기 →](https://jjing-goo.vercel.app/)
+
+---
+
+### 📝 사용 기술
+
+- html
+- css
+- javascript
+- kakao Map API
+- vercel (배포)
+
+---
+
+### 💡 개발 파트 / 사용 개발 툴
+
+- FRONTEND
+- figma
+- [github →](https://github.com/jiyoonyee/SpotHub_Last)
+
+---
+
+### 📖 프로젝트 개요
+
+#### 찡구는 자신과 친구의 중간 지점을 구해 주변의 약속 장소로 갈 수 있는 장소를 추천해주는 웹사이트 입니다.
+
+- html과 css로 UI를 구현했으며 javascript를 이용해 kakao Map API를 사용해 지도를 화면에 띄우고 중간 지점을 구하는 코드를 구현하였습니다.
+- kakao Map API 를 사용한 이유는 카카오맵 api 기능인 카테고리 분류 기능을 활용해 약속장소를 찾고 카카오맵 지오코딩을 사용하기 위해 kakao Map API를 사용하였습니다.
+
+### ✨ 주요 기능
+
+- **🚩 현재 내 위치 확인**: 현재 위치해 있는 장소의 X,Y값을 javascript의 Geolocation API를 활용해 가져와 자신의 현재 위치와 주소값을 알 수 있습니다.
+  ![찡구 메인 페이지](/images/jiingooWebMain.png)
+- **🏳️ 상대방 위치 검색**: [다음 우편 번호 API](https://postcode.map.daum.net/guide)를 활용해 검색한 상대방의 주소를 기반으로 카카오맵 지오코딩을 활용해 상대방의 위치를 찾을 수 있습니다.
+  ![찡구 검색 페이지](/images/jiingooWebSearch.png)
+  ![찡구 검색 페이지](/images/jiingooWebSearchC.png)
+- **🏁 중간 지점 확인**: 자신의 위치와 상대방의 좌표를 활용해 두 점사이의 중간 좌표에 카카오맵 마커 기능을 활용해 중간지점을 확인 할 수 있습니다.
+  ![찡구 중간 지점 페이지](/images/jiingooWebMiddle.png)
+- **🔎 주변 장소 탐색**: 현재 위치를 기반으로 카카오 마커 기능과 카테고리 기능을 활용해 근처의 카페,식당,지하철역과 같은 편의 시설을 확인 할 수 있고 현재 지도의 표시된 시설을 리스트로 확인 할 수 있습니다.
+  ![찡구 카테고리 페이지](/images/jiingooCategory.png)
