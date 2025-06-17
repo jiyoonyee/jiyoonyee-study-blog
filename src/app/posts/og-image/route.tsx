@@ -2,16 +2,17 @@ import { ImageResponse } from 'next/og';
 
 export function GET(request: Request) {
   const url = new URL(request.url);
+  console.log(url);
   const title = url.searchParams.get('title');
-  const image = url.searchParams.get('image');
-
+  // const image = url.searchParams.get('image');
   return new ImageResponse(
     (
       <div tw='flex flex-col w-full h-full items-center justify-center bg-white'>
         <div tw='flex flex-col md:flex-row w-full py-12 px-4 md:items-center justify-between p-16'>
           <h2 tw='flex flex-col text-8xl font-bold tracking-tight text-left'>
             {/* {title} */}
-            {image}
+            {/* <div>{image}</div> */}
+            {title}
           </h2>
         </div>
       </div>
