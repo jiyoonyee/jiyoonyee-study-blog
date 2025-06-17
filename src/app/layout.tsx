@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko'>
-      <body>
+      <body className='bg-neutral-800'>
         <div className='flex flex-col min-h-screen'>
           <Header />
-          <main className='flex-grow bg-gray-600'>{children}</main>
+          <main className='flex-grow '>{children}</main>
         </div>
         <Footer />
       </body>

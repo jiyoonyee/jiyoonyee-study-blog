@@ -1,6 +1,7 @@
 export const metadata = {
   title: '용산구시설관리공단 챗봇',
   description: '용산구시설관리공단 챗봇',
+  image: '/images/chatbotMain.png',
 };
 
 # 용산구시설관리공단 챗봇
@@ -27,14 +28,22 @@ export const metadata = {
 
 ---
 
+### 📖 프로젝트 개요
+
+#### 이 프로젝트는 서버와 클라이언트가 웹소캣 통신을 통해 응답을 주고 받는 웹사이트 입니다.
+
+- react를 활용해 UI를 styled-components 라이브러리를 활용해 페이지를 구현했습니다.
+- node.js의 웹 애플리케이션 프레임 워크인 express와 websocket통신을 이용해 통신하도록 구현했습니다.
+
+---
+
 ### ✨ 주요 기능
 
-- **🚩 현재 내 위치 확인**: 현재 위치해 있는 장소의 X,Y값을 javascript의 Geolocation API를 활용해 가져와 자신의 현재 위치와 주소값을 알 수 있습니다.
-  ![찡구 메인 페이지](/images/jiingooWebMain.png)
-- **🏳️ 상대방 위치 검색**: [다음 우편 번호 API](https://postcode.map.daum.net/guide)를 활용해 검색한 상대방의 주소를 기반으로 카카오맵 지오코딩을 활용해 상대방의 위치를 찾을 수 있습니다.
-  ![찡구 검색 페이지](/images/jiingooWebSearch.png)
-  ![찡구 검색 페이지](/images/jiingooWebSearchC.png)
-- **🏁 중간 지점 확인**: 자신의 위치와 상대방의 좌표를 활용해 두 점사이의 중간 좌표에 카카오맵 마커 기능을 활용해 중간지점을 확인 할 수 있습니다.
-  ![찡구 중간 지점 페이지](/images/jiingooWebMiddle.png)
-- **🔎 주변 장소 탐색**: 현재 위치를 기반으로 카카오 마커 기능과 카테고리 기능을 활용해 근처의 카페,식당,지하철역과 같은 편의 시설을 확인 할 수 있고 현재 지도의 표시된 시설을 리스트로 확인 할 수 있습니다.
-  ![찡구 카테고리 페이지](/images/jiingooCategory.png)
+- **🚩 답변 생성**: 사용자가 입력한 값을 중간 서버에 전송 후 태그와 같은 문자들을 삭제한 후 AI가 생성한 단어를 생성할때 마다 클라이언트에 전송해 자연스럽게 문장이 생성되도록 구현하였습니다.  
+  이 외에도 답변을 받지 않았을때 AI가 생성중인것을 알 수 있도록 애니메이션을 만들어 적용하였습니다.
+  <video
+    src='/videos/chatbot.mp4'
+    controls
+    width='100%'
+    style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+  />

@@ -53,14 +53,14 @@ export const metadata = {
   />
 - **✏️ 게시글 작성**: 클라이언트에서 로그인한 사용자가 api를 호출하면 작성한 내용과 이름을 서버에 전송해 서버에서 get방식으로 데이터베이스에 내용과 사용자의 이름을 db에 저장하였습니다.  
   그리고 작성자가 태그를 적어 나는 오류를 해결 하기 위해 &lt, &gt로 바꿔 db에 저장한 후 불러울때 he 라이브러리를 활용해 decoding 하여 화면에 보여주도록 구현했습니다.
-  ![찡구 메인 페이지](/images/boardWrite.png)
+  ![게시글 작성](/images/boardWrite.png)
 - **🔎 게시글 조회**: 메인페이지에서 db에 저장된 글들을 api를 호출해 작성된 글들을 리스트 형식으로 보여줍니다. 글을 클릭하면 작성된 글의 날짜, 작성자, 제목, 내용을 확인 할 수 있습니다.  
   react-router-dom의 searchparams 기능을 활용해 각 게시글의 아이디값을 사용해 게시글을 가져오도록 구현했습니다.
-  ![찡구 검색 페이지](/images/boardMain.png)
+  ![게시글 조회](/images/boardMain.png)
   ![찡구 검색 페이지](/images/boardContent.png)
 - **📝 게시글 수정**: 게시글 수정 버튼을 누르면 현재 작성된 게시글의 제목과 내용을 가져와 내용을 수정하면 db에 수정된 내용을 update 합니다.
-  ![찡구 검색 페이지](/images/boardUpdate.png)
-  ![찡구 검색 페이지](/images/boardUpdateC.png)
+  ![게시글 수정](/images/boardUpdate.png)
+  ![게시글 수정](/images/boardUpdateC.png)
 - **🗑️ 게시글 삭제**: 게시글 삭제 버튼을 누르면 현재 게시글이 삭제한 후 useNavigate hook을 사용해 메인페이지로 이동시킵니다.
-  ![찡구 중간 지점 페이지](/images/boardDel.png)
-  ![찡구 카테고리 페이지](/images/boardDelC.png)
+  ![게시글 삭제](/images/boardDel.png)
+  ![게시글 삭제](/images/boardDelC.png)

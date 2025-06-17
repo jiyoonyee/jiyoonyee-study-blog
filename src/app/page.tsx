@@ -21,7 +21,7 @@ export default async function Home() {
         {posts.map((post) => (
           <div
             key={post.slug}
-            className='border border-gray-800 rounded-lg shadow-md bg-amber-300 transition-transform transition-shadow duration-300 transform hover:-translate-y-2 hover:shadow-xl'>
+            className='border border-gray-800 rounded-lg shadow-md bg-gray-600 transition-transform transition-shadow duration-300 transform hover:-translate-y-2 hover:shadow-xl'>
             <Image
               src={
                 post.metadata.image ||
@@ -34,12 +34,14 @@ export default async function Home() {
             />
             <div className='p-4'>
               <h2 className='text-2xl font-bold mb-2'>
-                <Link href={`/posts/${post.slug}`}>{post.metadata.title}</Link>
+                <Link className='text-gray-200' href={`/posts/${post.slug}`}>
+                  {post.metadata.title}
+                </Link>
               </h2>
-              <p className='text-gray-600 mb-4'>{post.metadata.description}</p>
+              <p className='text-gray-300 mb-4'>{post.metadata.description}</p>
               <Link
                 href={`/posts/${post.slug}`}
-                className='text-blue-600 hover:underline  '>
+                className='text-blue-300 hover:underline  '>
                 자세히 보기
               </Link>
             </div>
