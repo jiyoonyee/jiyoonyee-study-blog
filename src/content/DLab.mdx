@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'DLab',
   description: 'DLab',
+  image: '/images/dlab.png',
 };
 
 # DLab
@@ -9,11 +10,13 @@ export const metadata = {
 
 ---
 
-### 📝 사용 기술
+### 📝 사용 기술 및 라이브러리
 
 - react
 - flask
+- festAPI
 - huggingface
+- SQLite
 - react-router-dom
 - react-fullpage
 - styled-components
@@ -32,25 +35,26 @@ export const metadata = {
 
 #### 실습실 신청과 노트북 태블릿 대여,관리를 도와주는 웹사이트 입니다.
 
-- react를 활용해 UI를 styled-components 라이브러리를 활용해 페이지를 구현했습니다.
-- flask를 이용해 각 실습실별 컴퓨터 정보와 실습실 신청정보를 axios 방식을 이용해 가져옵니다.
+- styled-components라이브러리를 활용해 UI를, react-router-dom를 통해 페이지 이동을 구현하였고 react-fullpage 라이브러리를 이용해 풀페이지 메인페이지를 구현했습니다.
+  <video
+    src='/videos/Dlab.mp4'
+    controls
+    width='70%'
+    style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+  />
+- flask를 이용해 각 실습실별 컴퓨터 정보와 실습실 신청정보를 가져와 사용자에게 보여줍니다.
 - huggingface에서 ai모델을 가져와 실습실 정보를 학습시켜 사용자에게 알맞은 실습실을 추천합니다.
 
 ---
 
 ### ✨ 주요 기능
 
-- **🚩 실습실 신청**: 현재 위치해 있는 장소의 X,Y값을 javascript의 Geolocation API를 활용해 가져와 자신의 현재 위치와 주소값을 알 수 있습니다.
-  <video
-    src='/videos/dlab.mp4'
-    controls
-    width='100%'
-    style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-  />
-- **🏳️ AI 기반 실습실 추천**:
-  {/* ![찡구 검색 페이지](/images/jiingooWebSearch.png) */}
-  {/* ![찡구 검색 페이지](/images/jiingooWebSearchC.png) */}
-- **🏁 노트북/태블릿 대여**:
-  {/* ![찡구 중간 지점 페이지](/images/jiingooWebMiddle.png) */}
-- **🔎 신청 조회**:
-  {/* ![찡구 카테고리 페이지](/images/jiingooCategory.png) */}
+- **🚩 실습실 신청**: 실습실이 있는 교실을 클릭해 각 교실별 컴퓨터 성능과 이미지를 서버에서 fetch형식으로 가져와 사용자에게 알려줍니다.
+  ![실습실 확인](/images/dlabroom.png)
+- **🏳️ AI 기반 실습실 추천**: huggingface에서 가져온 모델을 활용해 각 실습실별 특징과 컴퓨터성능에 맞춰서 AI가 알맞은 실습실을 추천해줍니다.
+  ![실습실 추천](/images/dlabremon.png)
+- **🏁 노트북/태블릿 대여**: 노트북/태블릿 대여 페이지에서 useRef라는 hook을 사용해 DOM요소에 접근해 이벤트를 적용시켰고 신청을 하면 서버에 fetch형식으로 데이터를 전송해 데이터 베이스에 저장합니다.
+  ![태블릿 신청](/images/dlabnotebook.png)
+- **🔎 신청 관리 / 조회**: 신청 조회 페이지에서 양식에 맞게 입력하면 db에서 조건에 맞는 데이터를 가져와 서버에서 클라이언트로 전송해 확인할 수 있습니다.  
+  관리자 페이지에서 admin 계정으로 로그인하면 신청한 노트북,태블릿의 대여현황을 관리 및 조회 할 수 있습니다.
+  ![관리자](/images/dlabadmin.png)
